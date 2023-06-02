@@ -4,15 +4,15 @@
  */
 package com.tendencias.m5b.Usuarios.Repository;
 
-import com.tendencias.m5b.Usuarios.Model.Usuarios;
+import com.tendencias.m5b.Usuarios.Model.Roles;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 /**
  *
- * @author 59398
+ * @author OWNER
  */
-public interface UsuarioRepository extends JpaRepository<Usuarios, Integer>{
-        @Query(value = "Select * from Usuario u where u.nombre = :nombre", nativeQuery = true)
-    public Usuarios buscarUsuario(String nombre);
+public interface RolRepository extends JpaRepository<Roles, Integer>{
+    @Query(value = "Select * from Roles u where u.nombre = :nombre", nativeQuery = true)
+    public Roles buscarRoles(String nombre);
 }
